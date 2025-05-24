@@ -3,7 +3,7 @@ import time
 from .solve import SolutionManager
 
 
-def solve(cube_string, max_length=25, max_time=10):
+def solve(cube_string, max_length=30, max_time=10):
     """
     Solve the cube specified by cube_string, return the first solution found
     as long as max_time not exceeded.
@@ -21,7 +21,7 @@ def solve(cube_string, max_length=25, max_time=10):
     )
 
 
-def solve_best(cube_string, max_length=25, max_time=10):
+def solve_best(cube_string, max_length=30, max_time=10):
     """
     Solve the cube repeatedly, reducing max_length each time a solution is
     found until timeout is reached or no more solutions are found.
@@ -31,7 +31,7 @@ def solve_best(cube_string, max_length=25, max_time=10):
     return list(solve_best_generator(cube_string, max_length, max_time))
 
 
-def solve_best_generator(cube_string, max_length=25, max_time=10):
+def solve_best_generator(cube_string, max_length=30, max_time=10):
     """
     Solve the cube repeatedly, reducing max_length each time a solution is
     found until timeout is reached or no more solutions are found.

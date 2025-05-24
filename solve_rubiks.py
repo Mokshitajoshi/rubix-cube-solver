@@ -19,7 +19,7 @@ def main():
 
     parser = argparse.ArgumentParser(description="Rubik's Cube Solver using Two-Phase Algorithm")
     parser.add_argument("--cube", required=True, help="The cube state as a 54-character string")
-    parser.add_argument("--max-length", type=int, default=25, help="Maximum solution length")
+    parser.add_argument("--max-length", type=int, default=30, help="Maximum solution length")
     parser.add_argument("--max-time", type=float, default=10.0, help="Maximum solving time in seconds")
     
     parser.add_argument(
