@@ -23,8 +23,7 @@ A Python-based Rubik's Cube solver and visualizer that uses the Two-Phase Algori
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/rubiks-cube-solver.git
-   cd rubiks-cube-solver
+   git clone https://github.com/Mokshitajoshi/rubiks-cube-solver.git
    ```
 
 2. Install the required dependencies:
@@ -87,6 +86,21 @@ The solver uses standard cube notation:
 - `F'`: Front face counter-clockwise
 - `F2`: Front face 180 degrees
 - Similarly for other faces: `U` (Up), `R` (Right), `D` (Down), `L` (Left), `B` (Back)
+- `U`: Up face clockwise
+- `U'`: Up face counter-clockwise
+- `U2`: Up face 180 degrees
+- `D`: Down face clockwise
+- `D'`: Down face counter-clockwise
+- `D2`: Down face 180 degrees
+- `L`: Left face clockwise
+- `L'`: Left face counter-clockwise
+- `L2`: Left face 180 degrees
+- `B`: Back face clockwise
+- `B'`: Back face counter-clockwise
+- `B2`: Back face 180 degrees
+- `R`: Right face clockwise
+- `R'`: Right face counter-clockwise
+- `R2`: Right face 180 degrees
 
 ## Color Scheme
 
@@ -101,14 +115,11 @@ The standard color scheme is:
 ## How It Works
 
 The solver implements Herbert Kociemba's Two-Phase Algorithm:
-
 1. **Phase 1**: Transforms the cube to a state where all edges are oriented correctly, all corners are oriented correctly, and the UD-slice edges are in the UD-slice
 2. **Phase 2**: Solves the remaining cube using only half-turn moves of the Up and Down faces, and quarter or half turns of the other faces
-
 The algorithm uses pattern databases (pruning tables) to efficiently search for solutions.
 
 ## Project Structure
-
 - `solve_rubiks.py`: Command-line interface for solving cubes
 - `cube_visualizer.py`: 3D visualization of the cube and solutions
 - `twophase/`: Implementation of the Two-Phase Algorithm
