@@ -10,7 +10,25 @@ A Python-based Rubik's Cube solver and visualizer that uses the Two-Phase Algori
 - **Command-line Interface**: Solve cubes directly from the command line
 - **Multiple Solving Methods**: Find first solution, best solution, or all solutions
 
-## Installation
+## Screenshots
+
+Here are some screenshots showcasing the Rubik's Cube Solver in action:
+
+### 3D Cube Visualization
+![3D Cube Visualization](screenshots/Cube_visualization.png)
+*The interactive 3D visualization of the Rubik's Cube with colored faces*
+
+### Command-line Solver Output
+![Command-line Solver](screenshots/Command_line_solver.png)
+*Output from the command-line solver showing the solution and statistics*
+
+### Different Cube States
+![Scrambled Cube](screenshots/Scrambled_cube.png)
+*A randomly scrambled cube before solving*
+
+![Solved Cube](screenshots/Solved_Cube.png)
+*A fully solved cube with all faces aligned*
+
 
 ### Prerequisites
 
@@ -23,8 +41,7 @@ A Python-based Rubik's Cube solver and visualizer that uses the Two-Phase Algori
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/rubiks-cube-solver.git
-   cd rubiks-cube-solver
+   git clone https://github.com/Mokshitajoshi/rubix-cube-solver.git
    ```
 
 2. Install the required dependencies:
@@ -121,3 +138,13 @@ The algorithm uses pattern databases (pruning tables) to efficiently search for 
     - `coordcube.py`: Coordinate-based representation for the solver
 - `pieces.py`: Enumerations for cube faces, corners, and edges
 - `random.py`: Generates random cube states
+
+# Some Scrambled Cubes
+FLBUULFFLFDURRDBUBUUDDFFBRDDBLRDRFLLRLRULFUDRRBDBBBUFL 
+BBURUDBFUFFFRRFUUFLULUFUDLRRDBBDBDBLUDDFLLRRBRLLLBRDDF
+
+## Acknowledgments
+
+- Herbert Kociemba for the Two-Phase Algorithm
+- All contributors to the project
+

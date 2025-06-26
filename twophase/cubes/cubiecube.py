@@ -9,7 +9,7 @@ from . import facecube
 
 def choose(n, k):
     """
-    A fast way to compute binomial coefficients by Andrew Dalke.
+    compute binomial coefficients
     """
     if 0 <= k <= n:
         num = 1
@@ -605,7 +605,6 @@ class CubieCube:
         """
         Compute corner, the coordinate representing permutation of the 8
         corners.
-
         There are 8 possible positions for the 8 corners, so corner takes
         values in the range 0, ..., 8! - 1.
         """
@@ -623,12 +622,7 @@ class CubieCube:
         """
         Set the corner of the cube. Each of the values 0, ..., 8! - 1
         determines a distinct permutation of the 8 corners.
-
-        Parameters
-        ----------
-        corner : int
-            Order of the 8 corners encoded as corner coordinate. Must satisfy
-            0 <= corner < 8!
+        Must satisfy 0 <= corner < 8!
         """
         corners = list(range(8))
         perm = [0] * 8
@@ -650,7 +644,6 @@ class CubieCube:
         """
         Compute edge, the coordinate representing permutation of the 12
         corners.
-
         There are 12 possible positions for the 12 edges, so edge takes values
         in the range 0, ..., 12! - 1.
         """
@@ -666,15 +659,10 @@ class CubieCube:
     @edge.setter
     def edge(self, edge):
         """
-        Set the edge8 of the cube. Each of the values 0, ..., 8! - 1 determines
+        Set the edge of the cube. Each of the values 0 to 8! - 1 determines
         a distinct order of the 8 edges UR, UF, UL, UB, DR, DF, DL, DB in the U
         and D slices during phase 2.
-
-        Parameters
-        ----------
-        edge8 : int
-            Order of the 8 aforementioned edges encoded as edge8 coordinate.
-            Must satisfy 0 <= edge8 < 8!
+        Must satisfy 0 <= edge < 8!
         """
         edges = list(range(12))
         perm = [0] * 12
@@ -687,24 +675,11 @@ class CubieCube:
         perm[0] = edges[0]
         self.ep = perm[:]
 
-    # ----------  Solvability Check ---------- #
 
     # Check a cubiecube for solvability
-    #
     def verify(self):
         """
         Check if current cube position is solvable.
-
-        Returns
-        -------
-        int:
-            Integer encoding solvability of cube.
-                0: Solvable
-                -2: not all 12 edges exist exactly once
-                -3: flip error: one edge should be flipped
-                -4: not all corners exist exactly once
-                -5: twist error - a corner must be twisted
-                -6: Parity error - two corners or edges have to be exchanged
         """
         total = 0
         edge_count = [0 for i in range(12)]

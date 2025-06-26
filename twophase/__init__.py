@@ -23,9 +23,6 @@ def solve(cube_string, max_length=30, max_time=10):
 
 def solve_best(cube_string, max_length=30, max_time=10):
     """
-    Solve the cube repeatedly, reducing max_length each time a solution is
-    found until timeout is reached or no more solutions are found.
-
     Returns all solutions found as a list.
     """
     return list(solve_best_generator(cube_string, max_length, max_time))
@@ -33,9 +30,6 @@ def solve_best(cube_string, max_length=30, max_time=10):
 
 def solve_best_generator(cube_string, max_length=30, max_time=10):
     """
-    Solve the cube repeatedly, reducing max_length each time a solution is
-    found until timeout is reached or no more solutions are found.
-
     Yields the solution each time it is found.
     """
     sm = SolutionManager(cube_string)
